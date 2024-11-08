@@ -1553,7 +1553,7 @@ dependencies = [
 [[package]]
 name = "cubecl"
 version = "0.4.0"
-source = "git+https://github.com/tracel-ai/cubecl?rev=3882ed25b47506d49562c501a179b7468e61702e#3882ed25b47506d49562c501a179b7468e61702e"
+source = "git+https://github.com/SarthakSingh31/cubecl.git?branch=sar/wasm-mulithreading#afbf438169153917959d1cb646d632682eb6af3d"
 dependencies = [
  "cubecl-core",
  "cubecl-cuda",
@@ -1584,7 +1584,7 @@ dependencies = [
 [[package]]
 name = "cubecl-common"
 version = "0.4.0"
-source = "git+https://github.com/tracel-ai/cubecl?rev=3882ed25b47506d49562c501a179b7468e61702e#3882ed25b47506d49562c501a179b7468e61702e"
+source = "git+https://github.com/SarthakSingh31/cubecl.git?branch=sar/wasm-mulithreading#afbf438169153917959d1cb646d632682eb6af3d"
 dependencies = [
  "derive-new 0.6.0",
  "embassy-futures",
@@ -1601,7 +1601,7 @@ dependencies = [
 [[package]]
 name = "cubecl-core"
 version = "0.4.0"
-source = "git+https://github.com/tracel-ai/cubecl?rev=3882ed25b47506d49562c501a179b7468e61702e#3882ed25b47506d49562c501a179b7468e61702e"
+source = "git+https://github.com/SarthakSingh31/cubecl.git?branch=sar/wasm-mulithreading#afbf438169153917959d1cb646d632682eb6af3d"
 dependencies = [
  "bytemuck",
  "cubecl-common 0.4.0",
@@ -1619,7 +1619,7 @@ dependencies = [
 [[package]]
 name = "cubecl-cpp"
 version = "0.4.0"
-source = "git+https://github.com/tracel-ai/cubecl?rev=3882ed25b47506d49562c501a179b7468e61702e#3882ed25b47506d49562c501a179b7468e61702e"
+source = "git+https://github.com/SarthakSingh31/cubecl.git?branch=sar/wasm-mulithreading#afbf438169153917959d1cb646d632682eb6af3d"
 dependencies = [
  "bytemuck",
  "cubecl-common 0.4.0",
@@ -1633,7 +1633,7 @@ dependencies = [
 [[package]]
 name = "cubecl-cuda"
 version = "0.4.0"
-source = "git+https://github.com/tracel-ai/cubecl?rev=3882ed25b47506d49562c501a179b7468e61702e#3882ed25b47506d49562c501a179b7468e61702e"
+source = "git+https://github.com/SarthakSingh31/cubecl.git?branch=sar/wasm-mulithreading#afbf438169153917959d1cb646d632682eb6af3d"
 dependencies = [
  "bytemuck",
  "cubecl-common 0.4.0",
@@ -1649,7 +1649,7 @@ dependencies = [
 [[package]]
 name = "cubecl-hip"
 version = "0.4.0"
-source = "git+https://github.com/tracel-ai/cubecl?rev=3882ed25b47506d49562c501a179b7468e61702e#3882ed25b47506d49562c501a179b7468e61702e"
+source = "git+https://github.com/SarthakSingh31/cubecl.git?branch=sar/wasm-mulithreading#afbf438169153917959d1cb646d632682eb6af3d"
 dependencies = [
  "bytemuck",
  "cubecl-common 0.4.0",
@@ -1674,7 +1674,7 @@ dependencies = [
 [[package]]
 name = "cubecl-linalg"
 version = "0.4.0"
-source = "git+https://github.com/tracel-ai/cubecl?rev=3882ed25b47506d49562c501a179b7468e61702e#3882ed25b47506d49562c501a179b7468e61702e"
+source = "git+https://github.com/SarthakSingh31/cubecl.git?branch=sar/wasm-mulithreading#afbf438169153917959d1cb646d632682eb6af3d"
 dependencies = [
  "bytemuck",
  "cubecl-core",
@@ -1685,7 +1685,7 @@ dependencies = [
 [[package]]
 name = "cubecl-macros"
 version = "0.4.0"
-source = "git+https://github.com/tracel-ai/cubecl?rev=3882ed25b47506d49562c501a179b7468e61702e#3882ed25b47506d49562c501a179b7468e61702e"
+source = "git+https://github.com/SarthakSingh31/cubecl.git?branch=sar/wasm-mulithreading#afbf438169153917959d1cb646d632682eb6af3d"
 dependencies = [
  "cubecl-common 0.4.0",
  "darling",
@@ -1700,7 +1700,7 @@ dependencies = [
 [[package]]
 name = "cubecl-opt"
 version = "0.4.0"
-source = "git+https://github.com/tracel-ai/cubecl?rev=3882ed25b47506d49562c501a179b7468e61702e#3882ed25b47506d49562c501a179b7468e61702e"
+source = "git+https://github.com/SarthakSingh31/cubecl.git?branch=sar/wasm-mulithreading#afbf438169153917959d1cb646d632682eb6af3d"
 dependencies = [
  "cubecl-common 0.4.0",
  "cubecl-core",
@@ -1737,7 +1737,7 @@ dependencies = [
 [[package]]
 name = "cubecl-runtime"
 version = "0.4.0"
-source = "git+https://github.com/tracel-ai/cubecl?rev=3882ed25b47506d49562c501a179b7468e61702e#3882ed25b47506d49562c501a179b7468e61702e"
+source = "git+https://github.com/SarthakSingh31/cubecl.git?branch=sar/wasm-mulithreading#afbf438169153917959d1cb646d632682eb6af3d"
 dependencies = [
  "async-channel",
  "async-lock",
@@ -1758,7 +1758,7 @@ dependencies = [
 [[package]]
 name = "cubecl-spirv"
 version = "0.4.0"
-source = "git+https://github.com/tracel-ai/cubecl?rev=3882ed25b47506d49562c501a179b7468e61702e#3882ed25b47506d49562c501a179b7468e61702e"
+source = "git+https://github.com/SarthakSingh31/cubecl.git?branch=sar/wasm-mulithreading#afbf438169153917959d1cb646d632682eb6af3d"
 dependencies = [
  "cubecl-common 0.4.0",
  "cubecl-core",
@@ -1772,7 +1772,7 @@ dependencies = [
 [[package]]
 name = "cubecl-wgpu"
 version = "0.4.0"
-source = "git+https://github.com/tracel-ai/cubecl?rev=3882ed25b47506d49562c501a179b7468e61702e#3882ed25b47506d49562c501a179b7468e61702e"
+source = "git+https://github.com/SarthakSingh31/cubecl.git?branch=sar/wasm-mulithreading#afbf438169153917959d1cb646d632682eb6af3d"
 dependencies = [
  "ash",
  "async-channel",
@@ -1784,8 +1784,10 @@ dependencies = [
  "cubecl-runtime 0.4.0",
  "cubecl-spirv",
  "derive-new 0.6.0",
+ "futures",
  "hashbrown 0.14.5",
  "log",
+ "rayon",
  "sanitize-filename",
  "web-time",
  "wgpu",
@@ -3644,7 +3646,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4979f22fdb869068da03c9f7528f8297c6fd2606bc3a4affe42e6a823fdb8da4"
 dependencies = [
  "cfg-if",
- "windows-targets 0.48.5",
+ "windows-targets 0.52.6",
 ]
 
 [[package]]
@@ -7570,7 +7572,7 @@ dependencies = [
  "js-sys",
  "log",
  "naga",
- "parking_lot 0.12.3",
+ "parking_lot 0.11.2",
  "profiling",
  "raw-window-handle",
  "smallvec",
@@ -7598,7 +7600,7 @@ dependencies = [
  "log",
  "naga",
  "once_cell",
- "parking_lot 0.12.3",
+ "parking_lot 0.11.2",
  "profiling",
  "raw-window-handle",
  "rustc-hash",
@@ -7639,7 +7641,7 @@ dependencies = [
  "ndk-sys",
  "objc",
  "once_cell",
- "parking_lot 0.12.3",
+ "parking_lot 0.11.2",
  "profiling",
  "range-alloc",
  "raw-window-handle",
@@ -7704,7 +7706,7 @@ version = "0.1.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cf221c93e13a30d793f7645a0e7762c55d169dbb0a49671918a2319d289b10bb"
 dependencies = [
- "windows-sys 0.48.0",
+ "windows-sys 0.52.0",
 ]
 
 [[package]]
