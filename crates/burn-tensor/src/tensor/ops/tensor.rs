@@ -103,7 +103,7 @@ pub trait FloatTensorOps<B: Backend> {
     /// # Returns
     ///
     /// The data structure with the tensor's data.
-    fn float_into_data(tensor: FloatTensor<B>) -> impl Future<Output = TensorData> + Send;
+    fn float_into_data(tensor: FloatTensor<B>) -> impl Future<Output = TensorData>;
 
     /// Gets the device of the tensor.
     ///
