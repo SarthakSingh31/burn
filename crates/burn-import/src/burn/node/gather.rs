@@ -1,5 +1,5 @@
 use super::{Node, NodeCodegen};
-use crate::burn::{TensorType, ToTokens, Type};
+use crate::burn::{ToTokens, Type};
 
 use burn::record::PrecisionSettings;
 use quote::quote;
@@ -8,13 +8,13 @@ use quote::quote;
 pub struct GatherNode {
     pub input: Type,
     pub index: Type,
-    pub output: TensorType,
+    pub output: Type,
     pub dim: usize,
 }
 
 impl<PS: PrecisionSettings> NodeCodegen<PS> for GatherNode {
     fn output_types(&self) -> Vec<Type> {
-        vec![Type::Tensor(self.output.clone())]
+        vec![self.output.clone()]
     }
 
     fn input_types(&self) -> Vec<crate::burn::Type> {
@@ -39,7 +39,7 @@ impl<PS: PrecisionSettings> NodeCodegen<PS> for GatherNode {
             _ => panic!("Gather needs Scalar or Shape input, got {:?}!", self.input),
         };
 
-        let output = &self.output.name;
+        let output = &self.output.name();
 
         match &self.index {
             Type::Scalar(idx_scalar) => {
@@ -48,10 +48,32 @@ impl<PS: PrecisionSettings> NodeCodegen<PS> for GatherNode {
                 // then squeeze the dimension to reduce the rank
                 let index = &idx_scalar.name;
                 let output_rank = input_rank - 1;
-                quote! {
-                    let indices = Tensor::<B, 1, _>::from_data([#index], &*self.device);
-                    let slice = Tensor::select(#input, #dim, indices);
-                    let #output = slice.squeeze::<#output_rank>(#dim);
+
+                if let Type::Scalar(scalar_type) = &self.output {
+                    assert_eq!(output_rank, 0);
+
+                    match &self.input {
+                        Type::Tensor(_) => {
+                            let ty = scalar_type.ty();
+                            quote! {
+                                let #output = #input.into_data().as_slice::<#ty>().unwrap()[#index];
+                            }
+                        }
+                        Type::Shape(shape_type) => {
+                            let input_name = &shape_type.name;
+
+                            quote! {
+                                let #output = #input_name[#index];
+                            }
+                        }
+                        _ => panic!("Gather needs Scalar or Shape input, got {:?}!", self.input),
+                    }
+                } else {
+                    quote! {
+                        let indices = Tensor::<B, 1, _>::from_data([#index], &*self.device);
+                        let slice = Tensor::select(#input, #dim, indices);
+                        let #output = slice.squeeze::<#output_rank>(#dim);
+                    }
                 }
             }
             Type::Tensor(idx_tensor) => {
