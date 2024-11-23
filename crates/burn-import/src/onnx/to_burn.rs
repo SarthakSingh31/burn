@@ -696,6 +696,7 @@ impl ParsedOnnxGraph {
     }
 
     fn reshape_conversion(node: Node) -> ReshapeNode {
+        dbg!(&node);
         let input = TensorType::from(node.inputs.first().unwrap());
         let output = TensorType::from(node.outputs.first().unwrap());
         let shape = reshape_config(&node);
